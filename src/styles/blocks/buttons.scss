@@ -1,0 +1,37 @@
+.button {
+  display: block;
+  color: $light-text-color;
+  background-color: $accented-color;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 56px;
+  font-weight: 700;
+  text-align: center;
+  border-width: 0;
+
+  border-radius: 8px;
+
+  user-select: none;
+
+  &--limited {
+    width: 280px;
+
+    @include on-tablet {
+      width: 100%;
+    }
+
+    @include on-desktop {
+      width: 324px;
+    }
+  }
+
+  @include hover(background-color, $main-text-color);
+
+  &:hover,
+  &:active {
+    cursor: default;
+  }
+  &:active {
+    background-color: $secondary-text-color;
+  }
+}
